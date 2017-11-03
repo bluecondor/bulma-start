@@ -15,6 +15,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015-ie": "^6.7.0",
+    "browser-sync": "^2.18.13",
     "bulma": "^0.6.0",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.1"
@@ -27,6 +28,7 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
+    "serve": "browser-sync start --server --files \"css/*.css, lib/*.js, **/*.html, !node_modules/**/*.html\"",
     "start": "npm run css-watch | npm run js-watch"
   }
 }
