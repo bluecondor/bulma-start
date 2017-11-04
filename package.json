@@ -17,7 +17,9 @@
     "babel-preset-es2015-ie": "^6.7.0",
     "browser-sync": "^2.18.13",
     "bulma": "^0.6.0",
+    "imagemin": "^5.3.1",
     "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1"
   },
   "scripts": {
@@ -25,10 +27,12 @@
     "css-build": "node-sass _sass/main.scss css/main.css",
     "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
     "css-watch": "npm run css-build -- --watch",
-    "deploy": "npm run css-deploy && npm run js-build",
+    "deploy": "npm run css-deploy && npm run js-build && npm run imagemin",
+    "imagemin": "imagemin _images/* -o images",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
     "serve": "browser-sync start --server --files \"css/*.css, lib/*.js, **/*.html, !node_modules/**/*.html\"",
-    "start": "npm run css-watch | npm run js-watch"
+    "start": "run-p serve watch",
+    "watch": "npm run css-watch | npm run js-watch"
   }
 }
