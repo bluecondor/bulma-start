@@ -27,7 +27,7 @@
     "css-build": "node-sass _sass/main.scss css/main.css",
     "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
     "css-watch": "npm run css-build -- --watch",
-    "deploy": "npm run css-deploy && npm run js-build && npm run imagemin",
+    "deploy": "npm run css-deploy && npm run js-build",
     "imagemin": "imagemin _images/* -o images",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
