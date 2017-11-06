@@ -1,13 +1,16 @@
-# Files
+### Ignore everything ###
+/*
+/*/
 
-.DS_Store
-.ruby-version
-npm-debug.log
-
-# Folders
-
-.idea/
-.sass-cache
-_gh_pages
-_site
-node_modules
+### Unignore these files and folders ###
+!.babelrc
+!.gitignore
+!README.md
+!package.json
+!bulma-start.png
+!made-with-bulma.png
+!*.html
+!css/
+!images/
+!js/
+!src/
