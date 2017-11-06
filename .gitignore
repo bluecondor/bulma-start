@@ -1,6 +1,7 @@
 ### Ignore everything ###
 /*
 /*/
+package-lock.json
 
 ### Unignore these files and folders ###
 !.babelrc
