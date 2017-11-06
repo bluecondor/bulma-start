@@ -7,8 +7,7 @@
 !.gitignore
 !README.md
 !package.json
-!bulma-start.png
-!made-with-bulma.png
+!*.png
 !*.html
 !css/
 !images/
